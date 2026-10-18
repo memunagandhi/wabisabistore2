@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: wabisabistore
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: MONGODB_URI
+        sync: false
+      - key: BASE_URL
+        value: https://wabisabistore.onrender.com
